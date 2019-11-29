@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/center/center",
+    "pages/search/search",
+    "pages/recommend/recommend",
+    "pages/chat/chat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "selectedColor": "#dd2720",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "imgs/bottom/home.jpg",
+        "selectedIconPath": "imgs/bottom/home_s.jpg",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "iconPath": "imgs/bottom/recommend.jpg",
+        "selectedIconPath": "imgs/bottom/recommend_choose.jpg",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "imgs/bottom/search.jpg",
+        "selectedIconPath": "imgs/bottom/search_s.jpg",
+        "text": "搜索"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "iconPath": "imgs/bottom/chat.jpg",
+        "selectedIconPath": "imgs/bottom/chat_s.jpg",
+        "text": "聊天"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "imgs/bottom/center.jpg",
+        "selectedIconPath": "imgs/bottom/center_s.jpg",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "l-grid": "/miniprogram_npm/lin-ui/grid/index",
+    "l-grid-item": "/miniprogram_npm/lin-ui/grid-item/index",
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "l-list": "/miniprogram_npm/lin-ui/list/index",
+    "l-price": "/miniprogram_npm/lin-ui/price/index",
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-loadmore": "/miniprogram_npm/lin-ui/loadmore/index",
+    "l-tabs": "/miniprogram_npm/lin-ui/tabs/index",
+    "l-tabpanel": "/miniprogram_npm/lin-ui/tabpanel/index",
+    "s-spu-preview": "/components/spu-preview/index",
+    "l-water-flow": "/miniprogram_npm/lin-ui/water-flow/index"
+  }
+}

@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="search-box">
+        <image class="icon" src="/imgs/search/search.png"></image>
+        <input type="text" placeholder="仙剑奇侠传" placeholder-class="placeholder"
+               bindfocus="onBindFocus" bindconfirm="onBindConfirm"/>
+    </view>
+</view>

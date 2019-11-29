@@ -1,0 +1,47 @@
+<view class="container">
+    <view class="order-container">
+        <l-list l-class="order-link" title="我的订单" l-content-class="left" right-desc="查看全部"
+                l-right-class="right"></l-list>
+    </view>
+    <l-grid l-class="inner-container" row-num="5">
+        <l-grid-item key="one" slot="one" l-class="l-grid-item">
+            <view class="grid-item">
+
+                <l-icon name='daifukuan' l-class='iconfont' size="50" color="#919191"/>
+                <view class="text">待付款</view>
+            </view>
+
+        </l-grid-item>
+        <l-grid-item key="two" slot="two" l-class="l-grid-item">
+            <view class="grid-item">
+
+                <l-icon name='daifenxiang' l-class='iconfont' size="50" color="#919191"/>
+                <view class="text">待分享</view>
+            </view>
+
+        </l-grid-item>
+        <l-grid-item key="three" slot="three" l-class="l-grid-item">
+            <view class="grid-item">
+
+                <l-icon name='daifahuo' l-class='iconfont' size="50" color="#919191"/>
+                <view class="text">待发货</view>
+            </view>
+
+        </l-grid-item>
+        <l-grid-item key="four" slot="four" l-class="l-grid-item">
+            <view class="grid-item">
+
+                <l-icon name='daishouhuo' l-class='iconfont' size="50" color="#919191"/>
+                <view class="text">待收货</view>
+            </view>
+
+        </l-grid-item>
+        <l-grid-item key="five" slot="five" l-class="l-grid-item">
+            <view class="grid-item">
+
+                <l-icon name='daipingjia' l-class='iconfont' size="50" color="#919191"/>
+                <view class="text">待评价</view>
+            </view>
+        </l-grid-item>
+    </l-grid>
+</view>

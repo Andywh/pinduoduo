@@ -1,0 +1,65 @@
+<view class="container">
+    <view class="header-container">
+        <l-list l-class="header-link" title="{{category.optName}}" l-content-class="left" right-desc="查看全部"
+                l-right-class="right"></l-list>
+    </view>
+    <l-grid l-class="inner-container" row-num="3">
+
+        <block wx:for="{{category.children}}">
+            <l-grid-item l-class="l-grid-item" key="{{index}}" slot="{{index}}" l-class="l-grid-item">
+                <view class="grid-item">
+                    <image class="img" src="{{item.imageUrl}}"></image>
+                    <text class="text">{{item.optName}}</text>
+                </view>
+            </l-grid-item>
+        </block>
+
+
+<!--        <l-grid-item key="one" slot="one" l-class="l-grid-item">-->
+<!--            <view class="grid-item">-->
+<!--                <image class="img" src="https://t00img.yangkeduo.com/goods/images/2019-09-07/0121fd91-e6ef-4535-8912-55dd40842f57.jpg"></image>-->
+<!--                <view class="text">女袜/丝袜</view>-->
+<!--            </view>-->
+<!--        </l-grid-item>-->
+<!--        <l-grid-item key="two" slot="two" l-class="l-grid-item">-->
+<!--            <view class="grid-item">-->
+<!--                <image class="img" src="https://t00img.yangkeduo.com/goods/images/2019-07-27/1174d2d9-2bda-4b19-b951-1cc38753a7d4.jpg"></image>-->
+<!--                <view class="text">男士保暖</view>-->
+<!--            </view>-->
+
+<!--        </l-grid-item>-->
+<!--        <l-grid-item key="three" slot="three" l-class="l-grid-item">-->
+<!--            <view class="grid-item">-->
+<!--                <image class="img" src="https://t00img.yangkeduo.com/goods/images/2019-08-18/86c12a70-6371-4b88-9235-83721006007c.jpg"></image>-->
+<!--                <view class="text">女士睡衣</view>-->
+<!--            </view>-->
+<!--        </l-grid-item>-->
+<!--        <l-grid-item key="four" slot="four" l-class="l-grid-item">-->
+<!--            <view class="grid-item">-->
+<!--                <image class="img" src="https://t00img.yangkeduo.com/goods/images/2019-09-11/6d46ff4d-5f9d-4990-a666-bbc1f17d59a1.png"></image>-->
+<!--                <view class="text">聚拢文胸</view>-->
+<!--            </view>-->
+
+<!--        </l-grid-item>-->
+<!--        <l-grid-item key="five" slot="five" l-class="l-grid-item">-->
+<!--            <view class="grid-item">-->
+<!--                <image class="img" src="https://t00img.yangkeduo.com/goods/images/2019-08-05/73219e59-f901-4258-bb54-5a7d42ba7d22.jpg"></image>-->
+<!--                <view class="text">无钢圈文胸</view>-->
+<!--            </view>-->
+<!--        </l-grid-item>-->
+<!--        <l-grid-item key="six" slot="six" l-class="l-grid-item">-->
+<!--            <view class="grid-item">-->
+<!--                <image class="img" src="https://t00img.yangkeduo.com/goods/images/2019-08-16/bb966fcf-27e1-4f71-94a9-8a689470221d.jpg"></image>-->
+
+<!--                <view class="text">女士内裤</view>-->
+<!--            </view>-->
+<!--        </l-grid-item>-->
+<!--        <l-grid-item key="seven" slot="seven" l-class="l-grid-item">-->
+<!--            <view class="grid-item">-->
+<!--                <image class="img" src="https://t00img.yangkeduo.com/goods/images/2019-11-12/2f6763bf-6e97-4f61-99c1-236b2ce33493.jpg"></image>-->
+<!--                <view class="text">男袜</view>-->
+<!--            </view>-->
+<!--        </l-grid-item>-->
+    </l-grid>
+
+</view>

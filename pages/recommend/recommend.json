@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "s-tabs": "/components/my-tabs/index",
+    "s-tabpanel": "/components/my-tabpanel/index"
+  }
+}

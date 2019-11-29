@@ -1,0 +1,92 @@
+<!--<view class="search">-->
+<!--    <icon type="search" class="search-img" size="13" color="#405f80" />-->
+<!--    <input type="text" placeholder="休闲夹克男" placeholder-class="placeholder"-->
+<!--           bindfocus="onBindFocus" bindconfirm="onBindConfirm"/>-->
+<!--</view>-->
+<view class="container">
+    <view class="header">
+        <view class="box">
+            <image class="icon" src="/imgs/search/search.png"></image>
+            <text class="search-text">休闲夹克男</text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <l-tabs bind:linchange="changeTabs"
+            placement="left"
+            swipeable="true"
+            l-class-header="tab-header"
+            l-active-class="tab-active"
+            l-class-line="line-active"
+            l-tabs-header="tabs-header"
+            inactiveColor="#010101">
+        <l-tabpanel tab="女装" key="a" slot="a">
+            <view class="tab-content">女装
+                武当祖师张三丰的三弟子俞岱岩奉师命令下山扶弱济贫，却不慎卷入到海盐帮与海沙派抢夺屠龙刀的争战中，遭人暗算致残。五弟子张翠山在寻找真凶的途中遇到天鹰教的殷素素，两个人深知正邪两教不共戴天，却暗生情愫。在东海中的王盘山岛上，江湖人士为屠龙刀再起纷争，两人为救岛上众人，被明教金毛狮王谢逊胁迫至一弧岛。两人于岛上成婚，并生下儿子张无忌。张翠山和谢逊也结为兄弟。
+                十年后四人返回陆地，却不料因为屠龙刀再现江湖而引发争战。张翠山和殷素素的结合也引发了正邪两派的纷争。为保义兄谢逊，张翠山和殷素素宁死不泄露屠龙刀的下落，双双自刎。年幼的张无忌目睹了父母双亡，更被“玄冥二老”所伤。张三丰带张无忌前往少林寺以求易筋经解毒，途中经历了种种生死考验。张无忌凭坚韧与淳良学得高超医术，又获得珍贵的《九阳真经》，除却了身上的阴毒，并以超凡的武功在明教光明顶化解了武林
+                的血雨腥风，成为明教教主。同时，张无忌对于蒙古公主赵敏、青梅竹马的小伙伴周芷若、表妹殷离、少女小昭的爱幕却很是不知所措、难以取舍。武当祖师张三丰的三弟子俞岱岩奉师命令下山扶弱济贫，却不慎卷入到海盐帮与海沙派抢夺屠龙刀的争战中，遭人暗算致残。五弟子张翠山在寻找真凶的途中遇到天鹰教的殷素素，两个人深知正邪两教不共戴天，却暗生情愫。在东海中的王盘山岛上，江湖人士为屠龙刀再起纷争，两人为救岛上众人，被明教金毛狮王谢逊胁迫至一弧岛。两人于岛上成婚，并生下儿子张无忌。张翠山和谢逊也结为兄弟。
+                十年后四人返回陆地，却不料因为屠龙刀再现江湖而引发争战。张翠山和殷素素的结合也引发了正邪两派的纷争。为保义兄谢逊，张翠山和殷素素宁死不泄露屠龙刀的下落，双双自刎。年幼的张无忌目睹了父母双亡，更被“玄冥二老”所伤。张三丰带张无忌前往少林寺以求易筋经解毒，途中经历了种种生死考验。张无忌凭坚韧与淳良学得高超医术，又获得珍贵的《九阳真经》，除却了身上的阴毒，并以超凡的武功在明教光明顶化解了武林
+                的血雨腥风，成为明教教主。同时，张无忌对于蒙古公主赵敏、青梅竹马的小伙伴周芷若、表妹殷离、少女小昭的爱幕却很是不知所措、难以取舍。武当祖师张三丰的三弟子俞岱岩奉师命令下山扶弱济贫，却不慎卷入到海盐帮与海沙派抢夺屠龙刀的争战中，遭人暗算致残。五弟子张翠山在寻找真凶的途中遇到天鹰教的殷素素，两个人深知正邪两教不共戴天，却暗生情愫。在东海中的王盘山岛上，江湖人士为屠龙刀再起纷争，两人为救岛上众人，被明教金毛狮王谢逊胁迫至一弧岛。两人于岛上成婚，并生下儿子张无忌。张翠山和谢逊也结为兄弟。
+                的血雨腥风，成为明教教主。同时，张无忌对于蒙古公主赵敏、青梅竹马的小伙伴周芷若、表妹殷离、少女小昭的爱幕却很是不知所措、难以取舍。我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑我的电脑
+            </view>
+        </l-tabpanel>
+        <l-tabpanel tab="男装" key="b" slot="b">
+            <view class="tab-content">男装
+
+                武当祖师张三丰的三弟子俞岱岩奉师命令下山扶弱济贫，却不慎卷入到海盐帮与海沙派抢夺屠龙刀的争战中，遭人暗算致残。五弟子张翠山在寻找真凶的途中遇到天鹰教的殷素素，两个人深知正邪两教不共戴天，却暗生情愫。在东海中的王盘山岛上，江湖人士为屠龙刀再起纷争，两人为救岛上众人，被明教金毛狮王谢逊胁迫至一弧岛。两人于岛上成婚，并生下儿子张无忌。张翠山和谢逊也结为兄弟。
+                十年后四人返回陆地，却不料因为屠龙刀再现江湖而引发争战。张翠山和殷素素的结合也引发了正邪两派的纷争。为保义兄谢逊，张翠山和殷素素宁死不泄露屠龙刀的下落，双双自刎。年幼的张无忌目睹了父母双亡，更被“玄冥二老”所伤。张三丰带张无忌前往少林寺以求易筋经解毒，途中经历了种种生死考验。张无忌凭坚韧与淳良学得高超医术，又获得珍贵的《九阳真经》，除却了身上的阴毒，并以超凡的武功在明教光明顶化解了武林
+                的血雨腥风，成为明教教主。同时，张无忌对于蒙古公主赵敏、青梅竹马的小伙伴周芷若、表妹殷离、少女小昭的爱幕却很是不知所措、难以取舍。
+            </view>
+        </l-tabpanel>
+        <l-tabpanel tab="食品" key="c" slot="c">
+            <view class="tab-content">食品</view>
+        </l-tabpanel>
+        <l-tabpanel tab="电脑" key="d" slot="d">
+            <view class="tab-content">电脑</view>
+        </l-tabpanel>
+        <l-tabpanel tab="百货" key="e" slot="e">
+            <view class="tab-content">百货</view>
+        </l-tabpanel>
+        <l-tabpanel tab="鞋包" key="f" slot="f">
+            <view class="tab-content">鞋包</view>
+        </l-tabpanel>
+        <l-tabpanel tab="家电" key="g" slot="g">
+            <view class="tab-content">家电</view>
+        </l-tabpanel>
+        <l-tabpanel tab="汽车" key="h" slot="h">
+            <view class="tab-content">汽车</view>
+        </l-tabpanel>
+        <l-tabpanel tab="母婴" key="i" slot="i">
+            <view class="tab-content">母婴</view>
+        </l-tabpanel>
+        <l-tabpanel tab="家装" key="j" slot="j">
+            <view class="tab-content">家装</view>
+        </l-tabpanel>
+        <l-tabpanel tab="美妆" key="k" slot="k">
+            <view class="tab-content">美妆</view>
+        </l-tabpanel>
+        <l-tabpanel tab="手机" key="l" slot="l">
+            <view class="tab-content">手机</view>
+        </l-tabpanel>
+        <l-tabpanel tab="内衣" key="m" slot="m">
+            <view class="tab-content">内衣</view>
+        </l-tabpanel>
+        <l-tabpanel tab="运动" key="o" slot="o">
+            <view class="tab-content">运动</view>
+        </l-tabpanel>
+        <l-tabpanel tab="水果" key="p" slot="p">
+            <view class="tab-content">水果</view>
+        </l-tabpanel>
+        <l-tabpanel tab="家纺" key="q" slot="four">
+            <view class="tab-content">家纺</view>
+        </l-tabpanel>
+        <l-tabpanel tab="健康" key="r" slot="r">
+            <view class="tab-content">健康</view>
+        </l-tabpanel>
+        <l-tabpanel tab="充值" key="s" slot="s">
+            <view class="tab-content">充值</view>
+        </l-tabpanel>
+        <l-tabpanel tab="海淘" key="t" slot="t">
+            <view class="tab-content">海淘</view>
+        </l-tabpanel>
+    </l-tabs>
+</view>

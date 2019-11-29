@@ -1,0 +1,13 @@
+<scroll-view scroll-into-view="{{toView}}" scroll-y scroll-x style="height: 500rpx" scroll-top="{{scrollTop}}">
+    <view id="red" class="block1"></view>
+    <view id="blue" class="block2"></view>
+    <view id="purple" class="block3"></view>
+    <view id="green" class="block4"></view>
+    <view id="yellow" class="block5"></view>
+</scroll-view>
+
+<!--按钮区域-->
+<view class="btn-area">
+    <button size="mini" bindtap="tap">click me to scroll into view</button>
+    <button size="mini" bindtap="tapMove">click me to scroll</button>
+</view>

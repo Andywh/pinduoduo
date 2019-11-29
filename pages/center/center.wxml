@@ -1,0 +1,61 @@
+<l-loadmore show>
+    <view slot="content" class="container">
+        <view class="head-container">
+            <view class="userinfo">
+                <view>
+                    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                        获取头像昵称
+                    </button>
+                    <block wx:else>
+                        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"
+                               mode="cover"></image>
+                    </block>
+                </view>
+                <view class="name-container">
+                    <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+                    <l-button shape="semicircle" size="mini" width="150" height="36" bgColor="#f7c2c3">更新资料</l-button>
+                </view>
+            </view>
+            <view class="right-container">
+                <!--            <l-button shape="semicircle" bgColor="#ffff22">拼单返现</l-button>-->
+                <l-button special="{{true}}" shape="semicircle" open-type="contact" bgColor="#f7c2c3">
+                    <view class="button-inner-container">
+                        <l-icon l-class='iconfont' name='hongbao' size="30" color="#E02E24"/>
+                        <view class="describe">拼单返现</view>
+                    </view>
+                    <!--                <l-icon size="40" name="customer-service" color="#3683d6" />-->
+                </l-button>
+
+            </view>
+        </view>
+        <!--    <view class="usermotto">-->
+        <!--        <text class="user-motto">{{motto}}</text>-->
+        <!--    </view>-->
+        <view class="month-card-container">
+            <s-list l-class="month-card"
+                    title="省钱月卡|帮你省194元" l-content-class="left"
+                    tag-content="领4张5元无门槛" tagShape="circle" tag-position="right" tag-color="#E02E24"
+                    arrow-color="#E02E24" arrowSize="20"
+            ></s-list>
+        </view>
+        <s-order-grid></s-order-grid>
+        <view class="red-container">
+            <s-red-grid></s-red-grid>
+        </view>
+        <view class="red-container">
+            <s-orange-grid grid="{{grid}}"></s-orange-grid>
+        </view>
+        <view class="banner-cuixiao">
+            <image class="banner-img"  src="http://t00img.yangkeduo.com/goods/2019-11-04/c6fa369f596dec58d14d35d0959ebea0.png"></image>
+        </view>
+        <view class="recommend-container">
+            <l-icon name='shangpinjinxuan' l-class='iconfont' size="35" color="#E02E24"/>
+            <view class="recommend-text">精选推荐</view>
+        </view>
+        <view class="spu-bottom">
+            <!--        <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>-->
+            <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+        </view>
+    </view>
+</l-loadmore>
+

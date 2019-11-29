@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "s-order-grid": "/components/order-grid/index",
+    "s-red-grid": "/components/red-grid/index",
+    "s-orange-grid": "/components/orange-grid/index",
+    "s-list": "/components/my-list/index"
+  }
+}

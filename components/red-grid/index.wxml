@@ -1,0 +1,36 @@
+<view class="container">
+    <l-grid l-class="inner-container" row-num="5">
+        <l-grid-item key="one" slot="one" l-class="l-grid-item">
+            <view class="grid-item">
+                <l-icon name='youhuiquan' l-class='iconfont' size="50" color="#E02E24"/>
+                <view class="text">优惠券</view>
+            </view>
+        </l-grid-item>
+        <l-grid-item key="two" slot="two" l-class="l-grid-item">
+            <view class="grid-item">
+                <l-icon name='shangpinshoucang' l-class='iconfont' size="50" color="#E02E24"/>
+                <view class="text">商品收藏</view>
+            </view>
+        </l-grid-item>
+        <l-grid-item key="three" slot="three" l-class="l-grid-item">
+            <view class="grid-item">
+
+                <l-icon name='dianpushoucang' l-class='iconfont' size="50" color="#E02E24"/>
+                <view class="text">店铺收藏</view>
+            </view>
+        </l-grid-item>
+        <l-grid-item key="four" slot="four" l-class="l-grid-item">
+            <view class="grid-item">
+
+                <l-icon name='lishiliulan' l-class='iconfont' size="50" color="#E02E24"/>
+                <view class="text">历史浏览</view>
+            </view>
+        </l-grid-item>
+        <l-grid-item key="five" slot="five" l-class="l-grid-item">
+            <view class="grid-item">
+                <l-icon name='tuikuanshouhou' l-class='iconfont' size="50" color="#E02E24"/>
+                <view class="text">退款售后</view>
+            </view>
+        </l-grid-item>
+    </l-grid>
+</view>

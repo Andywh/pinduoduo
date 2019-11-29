@@ -1,0 +1,25 @@
+<!--components/spu-preview/index.wxml-->
+
+<wxs src="../../wxs/price.wxs" module="p"></wxs>
+
+<view class="container">
+    <image  bind:load="onImgLoad" style="width:{{w}}rpx;height:{{h}}rpx" class="img" src="{{data.thumb_url}}"></image>
+    <view class="content-container">
+        <text class="title">{{data.short_name}}</text>
+<!--        <view class="tags">-->
+<!--            <block wx:for="{{tags}}" wx:key="{{index}}">-->
+<!--                <l-tag l-class="l-tag" size="super-mini">{{item}}</l-tag>-->
+<!--            </block>-->
+<!--        </view>-->
+        <view class="price-row">
+            <l-price color="#c90e2c"
+                     value-size="28"
+                     unit-size="20"
+                     value="{{p.displayPrice(data.group.price)}}"></l-price>
+            <text class="sales_tip">{{data.sales_tip}}</text>
+<!--            <image class="comment-img1" src="{{data.near_group.list[0].avatar}}"></image>-->
+<!--            <image class="comment-img2" src="{{data.near_group.list[1].avatar}}"></image>-->
+        </view>
+
+    </view>
+</view>

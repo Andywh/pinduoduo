@@ -1,0 +1,23 @@
+<view>
+    <scroll-view scroll-x="true" bindscroll="scrollMove">
+        <view class="container">
+            <l-grid l-class="inner-container" row-num="9">
+                <block wx:for="{{grid}}">
+                    <l-grid-item l-class="l-grid-item" key="{{index}}" slot="{{index}}">
+                        <view class="grid-item">
+                            <image class="img" src="{{item.img}}"></image>
+                            <text class="text">{{item.title}}</text>
+                        </view>
+                    </l-grid-item>
+                </block>
+            </l-grid>
+        </view>
+    </scroll-view>
+    <view class="scroll-bar-container">
+        <view class="scroll-line">
+            <view class="scrollMove" style="left:{{viewleft}}rpx"></view>
+        </view>
+    </view>
+</view>
+
+

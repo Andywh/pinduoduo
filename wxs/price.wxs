@@ -1,0 +1,7 @@
+function displayPrice(price) {
+	return price/100
+}
+
+module.exports = {
+	displayPrice:displayPrice
+}
