@@ -4,5 +4,8 @@
     "s-red-grid": "/components/red-grid/index",
     "s-orange-grid": "/components/orange-grid/index",
     "s-list": "/components/my-list/index"
-  }
+  },
+  "navigationBarTitleText": "个人中心",
+  "navigationBarTextStyle": "black"
+
 }

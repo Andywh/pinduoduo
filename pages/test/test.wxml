@@ -1,0 +1,47 @@
+<!--pages/test/test.wxml-->
+<view class="all-container">
+    <view class="header-box">这是一个测试用的 header box</view>
+    <view class="scroll-container">
+        <scroll-view
+                class="left-scroll"
+                scroll-y
+        >
+            <view class="tab-header">
+                <view class="block">首页1</view>
+                <view class="block2">推荐2</view>
+                <view class="block">搜索3</view>
+                <view class="block2">聊天4</view>
+                <view class="block">个人5</view>
+                <view class="block2">中心6</view>
+                <view class="block">吃饭7</view>
+                <view class="block2">土豆8</view>
+                <view class="block">牛肉9</view>
+                <view class="block2">鸡肉10</view>
+                <view class="block">番茄11</view>
+                <view class="block2">魔王12</view>
+                <view class="block">手机13</view>
+            </view>
+        </scroll-view>
+        <scroll-view
+                scroll-y
+                class="right-scroll"
+        >
+            <view class="tab-header">
+                <view class="block3">首页1</view>
+                <view class="block4">推荐2</view>
+                <view class="block3">搜索3</view>
+                <view class="block4">聊天4</view>
+                <view class="block3">个人5</view>
+                <view class="block4">中心6</view>
+                <view class="block3">吃饭7</view>
+                <view class="block4">土豆8</view>
+                <view class="block3">牛肉9</view>
+                <view class="block4">鸡肉10</view>
+                <view class="block3">番茄11</view>
+                <view class="block4">魔王12</view>
+                <view class="block3">手机13</view>
+            </view>
+        </scroll-view>
+    </view>
+
+</view>

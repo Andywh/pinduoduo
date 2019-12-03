@@ -1,0 +1,84 @@
+/* pages/test/test.wxss */
+
+/*.tab-header {*/
+/*    display: flex;*/
+/*    !*align-items: center;*!*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*    width: 100rpx;*/
+/*}*/
+page{
+    width: 100%;
+    height: 100%;
+}
+
+.all-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-box {
+    width: 100%;
+    height: 10%;
+    background-color: #3963bc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90%;
+}
+
+.left-scroll{
+    border-right: 1px solid #999;
+    width: 100rpx;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.right-scroll{
+    border-right: 1px solid #999;
+    width: 400rpx;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100rpx;
+    height: 100rpx;
+    background-color: orange;
+}
+.block2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100rpx;
+    height: 100rpx;
+    background-color: palegreen;
+}
+
+.block3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400rpx;
+    height: 200rpx;
+    background-color: greenyellow;
+}
+.block4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400rpx;
+    height: 200rpx;
+    background-color: blueviolet;
+}

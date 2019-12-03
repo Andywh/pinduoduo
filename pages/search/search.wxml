@@ -5,20 +5,24 @@
 <!--           bindfocus="onBindFocus" bindconfirm="onBindConfirm"/>-->
 <!--</view>-->
 <view class="container">
-    <view class="header">
-        <view class="box">
-            <image class="icon" src="/imgs/search/search.png"></image>
-            <text class="search-text">休闲夹克男</text>
+    <view class="header-bock">
+        <view class="search-box">
+            <view class="box">
+                <image class="icon" src="/imgs/search/search.png"></image>
+                <text class="search-text">休闲夹克男</text>
+            </view>
         </view>
+        <view class="hr"></view>
     </view>
-    <view class="hr"></view>
-    <s-tabs bind:linchange="changeTabs"
-            placement="left"
-            l-class-header="tab-header"
-            l-active-class="tab-active"
-            l-class-line="line-active"
-            l-tabs-header="tabs-header"
-            inactiveColor="#010101"
-            categoryList="{{categoryList}}">
-    </s-tabs>
+    <view class="category-block">
+        <s-tabs bind:linchange="changeTabs"
+                placement="left"
+                l-class-header="tab-header"
+                l-active-class="tab-active"
+                l-class-line="line-active"
+                l-tabs-header="tabs-header"
+                inactiveColor="#010101"
+                categoryList="{{categoryList}}">
+        </s-tabs>
+    </view>
 </view>

@@ -4,7 +4,8 @@
     "pages/center/center",
     "pages/search/search",
     "pages/recommend/recommend",
-    "pages/chat/chat"
+    "pages/chat/chat",
+    "pages/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,7 +18,7 @@
     "selectedColor": "#dd2720",
     "list": [
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/test/test",
         "iconPath": "imgs/bottom/home.jpg",
         "selectedIconPath": "imgs/bottom/home_s.jpg",
         "text": "首页"

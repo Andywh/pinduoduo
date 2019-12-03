@@ -1,9 +1,4 @@
-import scrollCenter from '../../miniprogram_npm/lin-ui/behaviors/scrollCenter';
-
-var colors = ['red', 'purple', 'green', 'yellow', 'orange', 'brown']
-
 Component({
-    behaviors: [scrollCenter],
     externalClasses: [
         'l-class-tabs',
         'l-class-header',
@@ -24,19 +19,6 @@ Component({
         'l-header-line-class',
         'l-icon-class'
     ],
-    relations: {
-        '../my-tabpanel/index': {
-            type: 'child',
-            linked() {
-                // 每次有子节点被插入时执行，target是该节点实例对象，触发在该节点attached生命周期之后
-                this.initTabs();
-            },
-            unlinked() {
-                this.initTabs();
-            }
-        },
-
-    },
     options: {
         multipleSlots: true // 在组件定义时的选项中启用多slot支持
     },
@@ -44,18 +26,11 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        activeKey: {
-            type: String,
-            value: '',
-            observer: 'changeCurrent'
-        },
         placement: {
             type: String,
             value: 'top',
         },
         animated: Boolean,
-        swipeable: Boolean,
-        scrollable: Boolean,
         hasLine: {
             type: Boolean,
             value: true
@@ -84,56 +59,42 @@ Component({
         currentIndex: 0,
         transformX: 0,
         transformY: 0,
+        oneShow: true,
+        leftTop: 0,
     },
 
     ready() {
+        // console.log('this.data.categoryList', this.data.categoryList)
         var that = this
-        // this.initTabs();
-        wx.createSelectorQuery().select('.l-tabs-item').boundingClientRect(function (rect) { // select
-        }).exec(function (res) {
+        var h = 0
+        var heightArr = []
+        setTimeout(function () {
+            that.createSelectorQuery().select('.l-tabs-item').boundingClientRect(function (rect) { // select
+            }).exec(function (res) {
+                that.setData({
+                    left_item_height: res[0].height
+                })
+            })
+        }, 1000)
 
-            // that.setData({
-            //     left_item_height: res[0].height
-            // })
-        })
-        // console.log("this.data.left_item_height", this.data.left_item_height)
-        // wx.createSelectorQuery().selectAll()
+        setTimeout(function () {
+            that.createSelectorQuery().selectAll('.right-view-item').boundingClientRect(function (rect) {
+            }).exec(function (res) {
+                res[0].forEach((item) => {
+                    h += item.height
+                    heightArr.push(h)
+                })
+                that.setData({
+                    heightArr:heightArr
+                })
+            })
+        }, 1000)
     },
-
 
     /**
      * 组件的方法列表
      */
     methods: {
-        initTabs(val = this.data.activeKey) {
-            let items = this.getRelationNodes('../my-tabpanel/index');
-            if (items.length > 0) {
-                let activeKey = val,
-                    currentIndex = this.data.currentIndex;
-                const tab = items.map((item, index) => {
-
-                    activeKey = !val && index == 0 ? item.data.key : activeKey;
-                    currentIndex = item.data.key === activeKey ? index : currentIndex;
-                    return {
-                        tab: item.data.tab,
-                        key: item.data.key,
-                        icon: item.data.icon,
-                        iconSize: item.data.iconSize,
-                        image: item.data.image,
-                        picPlacement: item.data.picPlacement,
-                    };
-                });
-                this.setData({
-                    tabList: tab,
-                    activeKey,
-                    currentIndex,
-                }, () => {
-                    if (this.data.scrollable) {
-                        this.queryMultipleNodes();
-                    }
-                });
-            }
-        },
         swiperChange(e) {
             const {
                 source,
@@ -141,44 +102,54 @@ Component({
             } = e.detail;
             if (source == 'touch') {
                 const currentIndex = current;
-                const activeKey = this.data.tabList[current].key;
                 this._setChangeData({
-                    activeKey,
                     currentIndex
                 });
             }
         },
         handleChange(e) {
-            const activeKey = e.currentTarget.dataset.key;
             const currentIndex = e.currentTarget.dataset.index;
-            this._setChangeData({
-                activeKey,
-                currentIndex,
-            });
-            console.log("handleChange")
-            console.log('activeKey', activeKey)
-            console.log('currentIndex', currentIndex)
             this.setData({
-              toView:"d-"+currentIndex
+                toViewR: "r-" + currentIndex,
+                currentIndex
             })
         },
 
-        _setChangeData({
-                           activeKey,
-                           currentIndex
-                       }) {
-            this.setData({
-                activeKey,
-                currentIndex
-            }, () => {
-                if (this.data.scrollable) {
-                    this.queryMultipleNodes();
+        handleRightScroll(e) {
+            var oneShow = this.data.oneShow
+            let scrollTop = e.detail.scrollTop
+            let scrollArr = this.data.heightArr
+            const currentIndex = e.currentTarget.dataset.index;
+            let leftTop = this.data.leftTop;
+            const leftItemHeight =  this.data.left_item_height
+            const marginTopIndex = 5
+            for (let i = 0; i < scrollArr.length; i++) {
+                if (scrollTop >= 0 && scrollTop < scrollArr[0]) {
+                    if (oneShow) {
+                        this.setData({
+                            currentIndex: 0,
+                            oneShow: false
+                        })
+                        return
+                    }
+                } else if (scrollTop + 200 >= scrollArr[i-1] && scrollTop + 200 < scrollArr[i]) {
+                    if ( i != currentIndex) {
+                        // 动态滚动左侧 scroll-view item
+                        if (i >= marginTopIndex) {
+                            leftTop = leftItemHeight * (i - marginTopIndex)
+                        } else {
+                            leftTop = 0
+                        }
+                        this.setData({
+                            oneShow: true,
+                            currentIndex: i,
+                            toViewL: "l-" + currentIndex,
+                            leftTop: leftTop
+                        })
+                    }
                 }
-            });
-            this.triggerEvent('linchange', {
-                activeKey,
-                currentIndex
-            });
-        }
+            }
+        },
+
     }
 });

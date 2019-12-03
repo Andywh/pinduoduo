@@ -3,5 +3,7 @@
         "s-category-grid": "/components/category-grid/index",
         "l-segment": "/miniprogram_npm/lin-ui/segment/index",
         "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index"
-    }
+    },
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
 }
