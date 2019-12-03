@@ -1,9 +1,3 @@
-
-<!--<view class="search">-->
-<!--    <icon type="search" class="search-img" size="13" color="#405f80" />-->
-<!--    <input type="text" placeholder="休闲夹克男" placeholder-class="placeholder"-->
-<!--           bindfocus="onBindFocus" bindconfirm="onBindConfirm"/>-->
-<!--</view>-->
 <view class="container">
     <view class="header-bock">
         <view class="search-box">
@@ -14,15 +8,7 @@
         </view>
         <view class="hr"></view>
     </view>
-    <view class="category-block">
-        <s-tabs bind:linchange="changeTabs"
-                placement="left"
-                l-class-header="tab-header"
-                l-active-class="tab-active"
-                l-class-line="line-active"
-                l-tabs-header="tabs-header"
-                inactiveColor="#010101"
-                categoryList="{{categoryList}}">
-        </s-tabs>
-    </view>
+    <s-tabs placement="left"
+            categoryList="{{categoryList}}">
+    </s-tabs>
 </view>

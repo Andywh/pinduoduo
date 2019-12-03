@@ -42,7 +42,7 @@ Component({
         },
         inactiveColor: {
             type: String,
-            value: '#bbbbbb'
+            value: '#010101'
         },
         equalWidth: {
             type: Boolean,
@@ -64,7 +64,6 @@ Component({
     },
 
     ready() {
-        // console.log('this.data.categoryList', this.data.categoryList)
         var that = this
         var h = 0
         var heightArr = []

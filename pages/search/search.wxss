@@ -1,4 +1,3 @@
-/* pages/search/search.wxss */
 
 .search-box {
     background-color: white;
@@ -8,7 +7,6 @@
     width: 100%;
     /*background-color: blue;*/
     align-items: center;
-
 }
 
 .box {
@@ -39,20 +37,4 @@
     height: 1px;
     width: 100%;
     background-color: #f9f9f9;
-}
-
-.tab-header {
-    height: 1300rpx !important;
-}
-
-.tab-active {
-    color: #E02E24 !important;
-}
-
-.line-active {
-    background-color: #E02E24 !important;
-}
-
-.tab-item {
-    height: 200rpx;
 }

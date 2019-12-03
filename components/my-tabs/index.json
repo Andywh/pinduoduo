@@ -2,7 +2,6 @@
   "component": true,
   "usingComponents": {
     "s-search-category": "/components/search-category-grid/index",
-    "s-search-categoryb": "/components/search-category-grid-b/index",
     "l-icon":"/miniprogram_npm/lin-ui/icon/index",
     "l-badge":"/miniprogram_npm/lin-ui/badge/index",
     "l-tabpanel":"/miniprogram_npm/lin-ui/tabpanel/index"

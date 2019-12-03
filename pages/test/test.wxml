@@ -5,6 +5,7 @@
         <scroll-view
                 class="left-scroll"
                 scroll-y
+                style="height: {{scrollViewHeight}}px"
         >
             <view class="tab-header">
                 <view class="block">首页1</view>
@@ -25,6 +26,7 @@
         <scroll-view
                 scroll-y
                 class="right-scroll"
+                style="height: {{scrollViewHeight}}px"
         >
             <view class="tab-header">
                 <view class="block3">首页1</view>
