@@ -89,6 +89,21 @@
 					"id": -1,
 					"name": "pages/test/test",
 					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/home/category/category",
+					"pathName": "pages/home/category/category",
+					"query": "id=1",
 					"scene": null
 				}
 			]

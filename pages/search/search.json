@@ -3,6 +3,7 @@
     "s-tabs": "/components/my-tabs/index",
     "s-tabpanel": "/components/my-tabpanel/index",
     "s-search": "/components/search/index",
+    "s-search-bar": "/components/search-bar/index",
     "s-search-category": "/components/search-category-grid/index"
   },
   "navigationBarTitleText": "搜索",

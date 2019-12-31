@@ -1,6 +1,7 @@
 // pages/center/center.js
 import {Orange} from "../../models/orange";
 import {SpuPaging} from "../../models/spu-paging";
+import {User} from "../../models/user";
 
 const app = getApp()
 Page({
@@ -52,13 +53,19 @@ Page({
         }
         this.initBottomSpuList()
     },
-    getUserInfo: function (e) {
+    async getUserInfo(e) {
+        console.log("getUserInfo")
         console.log(e)
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
             userInfo: e.detail.userInfo,
             hasUserInfo: true
         })
+        const userInfo = e.detail.userInfo
+        // userInfo['openid']
+        console.log('userInfo', userInfo)
+        const updateResponse = User.update(userInfo);
+        console.log("updateResponse: ", updateResponse)
     },
 
 
@@ -83,13 +90,6 @@ Page({
             return
         }
         wx.lin.renderWaterFlow(data.items)
-
-        // if (!data.moreData) {
-        // 	this.setData({
-        // 		loadingType:'end'
-        // 	})
-        // }
-
     },
 
     /**

@@ -1,4 +1,8 @@
 /* components/category-grid/index.wxss */
+.outer-container {
+    background-color: white;
+}
+
 .container {
     /*background-color: #ffff22 !important;*/
     height: 320rpx;

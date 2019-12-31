@@ -1,14 +1,10 @@
 <view class="container">
     <view class="header-bock">
-        <view class="search-box">
-            <view class="box">
-                <image class="icon" src="/imgs/search/search.png"></image>
-                <text class="search-text">休闲夹克男</text>
-            </view>
-        </view>
+        <s-search-bar></s-search-bar>
         <view class="hr"></view>
     </view>
-    <s-tabs placement="left"
+    <s-tabs bind:linchange="changeTabs"
+            placement="left"
             categoryList="{{categoryList}}">
     </s-tabs>
 </view>

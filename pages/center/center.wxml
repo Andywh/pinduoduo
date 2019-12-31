@@ -13,7 +13,7 @@
                 </view>
                 <view class="name-container">
                     <view class="userinfo-nickname">{{userInfo.nickName}}</view>
-                    <l-button shape="semicircle" size="mini" width="150" height="36" bgColor="#f7c2c3">更新资料</l-button>
+                    <l-button shape="semicircle" size="mini" width="150" height="36" bgColor="#f7c2c3" open-type="getUserInfo" bindgetuserinfo="getUserInfo">更新资料</l-button>
                 </view>
             </view>
             <view class="right-container">

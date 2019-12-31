@@ -1,4 +1,60 @@
 /* pages/home/home.wxss */
+.container {
+}
+
+.container {
+    background-color: white;
+}
+
+/*.top-scroll {*/
+/*    white-space: nowrap;*/
+/*    display: inline-block;*/
+/*}*/
+
+.tab-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 96rpx;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 76rpx;
+    color: #666666;
+    background-color: white;
+}
+
+.l-tab-line {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    height: 5rpx;
+    background-color: #E02E24;
+}
+
+.l-line-aminmated {
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+    transition-delay: 0.5s;
+}
+
+
+.search-box {
+    padding-top: 35rpx;
+    padding-right: 180rpx;
+    /*padding-bottom: 10rpx;*/
+    /*width: 550rpx;*/
+    /*height: 200rpx;*/
+    background-color: white;
+}
 
 .swiper {
     width: 100%;

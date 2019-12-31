@@ -1,5 +1,34 @@
-<l-loadmore show>
-    <view slot="content" class="container">
+<view class="search-box">
+    <s-search-bar></s-search-bar>
+</view>
+
+<!--<s-home-scroll-view topCategory="{{topCategory}}"></s-home-scroll-view>-->
+
+<view class="container">
+    <scroll-view
+            class="top-scroll"
+            scroll-with-animation="true"
+            scroll-into-view="{{toViewB}}"
+            scroll-left="{{leftScroll}}"
+            scroll-x="{{true}}">
+        <view class="tab-header">
+            <block wx:for="{{topCategory}}" wx:for-item="item" wx:for-index="index">
+                <view class="tab-item">
+                    <view class="block"
+                          style="color:{{index===currentIndex?activeColor:inactiveColor}}"
+                          data-index="{{index}}"
+                          data-categoryId="{{item.optId}}"
+                          data-optName="{{item.optName}}"
+                          id="{{index}}"
+                          bind:tap="handleChange">{{item.optName}}
+                    </view>
+                    <view id="b-{{index}}" class="{{index===currentIndex?'l-tab-line':''}}}"></view>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <s-hr></s-hr>
+    <view wx:if="{{currentIndex==0}}">
         <swiper class="swiper" indicator-dots="{{true}}"
                 indicator-color="#ffffff"
                 indicator-active-color="#ff2121"
@@ -12,6 +41,25 @@
             </block>
         </swiper>
         <s-category-grid grid="{{grid}}"></s-category-grid>
+    </view>
+    <s-home-category-grid wx:else grid="{{levelOneCategory}}" topId="{{topCategoryId}}" topName="{{topName}}"></s-home-category-grid>
+</view>
+
+
+<l-loadmore show>
+    <view slot="content">
+        <!--        <swiper class="swiper" indicator-dots="{{true}}"-->
+        <!--                indicator-color="#ffffff"-->
+        <!--                indicator-active-color="#ff2121"-->
+        <!--                autoplay-->
+        <!--                circular>-->
+        <!--            <block wx:for="{{bannerA.items}}">-->
+        <!--                <swiper-item>-->
+        <!--                    <image class="swiper" src="{{item.img}}"></image>-->
+        <!--                </swiper-item>-->
+        <!--            </block>-->
+        <!--        </swiper>-->
+        <!--        <s-category-grid grid="{{grid}}"></s-category-grid>-->
 
         <view class="spu-bottom">
             <!--        <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>-->

@@ -74,7 +74,7 @@ Component({
                     left_item_height: res[0].height
                 })
             })
-        }, 1000)
+        }, 300)
 
         setTimeout(function () {
             that.createSelectorQuery().selectAll('.right-view-item').boundingClientRect(function (rect) {
@@ -87,7 +87,7 @@ Component({
                     heightArr:heightArr
                 })
             })
-        }, 1000)
+        }, 300)
     },
 
     /**
@@ -110,11 +110,27 @@ Component({
             const currentIndex = e.currentTarget.dataset.index;
             this.setData({
                 toViewR: "r-" + currentIndex,
-                currentIndex
+                currentIndex,
+            })
+            this.checkAndScrollLeft(currentIndex)
+        },
+
+        checkAndScrollLeft(currentIndex) {
+            const marginTopIndex = 5
+            const leftItemHeight =  this.data.left_item_height
+            let leftTop = this.data.leftTop
+            if (currentIndex >= marginTopIndex) {
+                leftTop = leftItemHeight * (currentIndex- marginTopIndex)
+            } else {
+                leftTop = 0
+            }
+            this.setData({
+                leftTop: leftTop
             })
         },
 
         handleRightScroll(e) {
+            console.log("scroll")
             var oneShow = this.data.oneShow
             let scrollTop = e.detail.scrollTop
             let scrollArr = this.data.heightArr
@@ -134,17 +150,18 @@ Component({
                 } else if (scrollTop + 200 >= scrollArr[i-1] && scrollTop + 200 < scrollArr[i]) {
                     if ( i != currentIndex) {
                         // 动态滚动左侧 scroll-view item
-                        if (i >= marginTopIndex) {
-                            leftTop = leftItemHeight * (i - marginTopIndex)
-                        } else {
-                            leftTop = 0
-                        }
+                        // if (i >= marginTopIndex) {
+                        //     leftTop = leftItemHeight * (i - marginTopIndex)
+                        // } else {
+                        //     leftTop = 0
+                        // }
                         this.setData({
                             oneShow: true,
                             currentIndex: i,
                             toViewL: "l-" + currentIndex,
                             leftTop: leftTop
                         })
+                        this.checkAndScrollLeft(i)
                     }
                 }
             }

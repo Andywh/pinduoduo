@@ -21,6 +21,12 @@
                 <view class="block">番茄11</view>
                 <view class="block2">魔王12</view>
                 <view class="block">手机13</view>
+                <view class="block2">土豆14</view>
+                <view class="block">牛肉15</view>
+                <view class="block2">鸡肉16</view>
+                <view class="block">番茄17</view>
+                <view class="block2">魔王18</view>
+                <view class="block">手机19</view>
             </view>
         </scroll-view>
         <scroll-view

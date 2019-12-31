@@ -1,9 +1,15 @@
 {
     "usingComponents": {
         "s-category-grid": "/components/category-grid/index",
+        "s-home-scroll-view": "/components/home-scroll-view/index",
         "l-segment": "/miniprogram_npm/lin-ui/segment/index",
-        "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index"
+        "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index",
+        "s-search-bar": "/components/search-bar/index",
+        "s-hr": "/components/hr/index",
+        "s-home-category-grid": "/components/home-category-grid/index"
     },
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#ffffff"
 }

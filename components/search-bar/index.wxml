@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="box">
+        <image class="icon" src="/imgs/search/search.png"></image>
+        <text class="search-text">休闲夹克男</text>
+    </view>
+</view>

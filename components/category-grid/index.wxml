@@ -1,4 +1,4 @@
-<view>
+<view class="outer-container">
     <scroll-view scroll-x="true" bindscroll="scrollMove">
         <view class="container">
             <l-grid l-class="inner-container" row-num="9">
